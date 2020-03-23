@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="practice.css">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cash/1.3.0/cash.min.js"></script>
+</head>
+<body>
+    <div class="container header1">
+        <header> 
+        
+         <img src="img/InivtaLogo.png" alt="Logo" class="logo">
+
+            <nav>
+                <a href="#" class="hide-mobil">
+                    <img src="img/ham.svg" alt="menu"   class="menu" id="menu">
+
+                 </a>
+                <ul class="show-desktop hide-mobile" id="nav">
+                     <li id="exit" class="exit-btn hide-mobil">
+                    <img src="img/exit.svg" alt="close"></li>
+                     <li><a href="#">Home</a></li>
+                     <li><a href="#">About</a></li>
+                     <li><a href="#">Details</a></li>
+                     <li><a href="#">Services</a></li>
+                     <li><a href="#">Products</a></li>
+                </ul>
+        
+            </nav>
+
+        </header>
+
+        <section class="section">
+            <div class="mainSection">   
+                <h4>Most Recent Projects</h4>
+                <ul class="cards">
+                     <li class="card">
+                        <h3> Project card 1 </h3>
+                        <p>
+                            And ipsum dolar sit amet, 
+                            consectetur adipiscing elit. Nulla
+                            fringilla ullamcorper diam id
+                            pellentesque. Fusce id accumsan enim. 
+                        </p>
+                    </li>
+                    <li class="card">
+                        <h3> Project card 2 </h3>
+                        <p>
+                            Lorem ipsum dolar sit amet, 
+                            consectetur adipiscing elit. Nulla
+                            fringilla ullamcorper diam id
+                            pellentesque. Fusce id accumsan enim. 
+                        </p>
+                    </li>
+                    <li class="card">
+                        <h3> Project card 3 </h3>
+                        <p>
+                            ashish ipsum dolar sit amet, 
+                            consectetur adipiscing elit. Nulla
+                            fringilla ullamcorper diam id
+                            pellentesque. Fusce id accumsan enim. 
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="div2"> 
+                    <h1 class="h1"> DO YOU EVER WORRY ABOUT</br></h1>
+                     <p class="subhead">Lorem ipsum dolar sit amet, 
+                        consectetur adipiscing elit. Nulla
+                         fringilla ullamcorper diam id
+                          pellentesque. Fusce id accumsan enim.
+                          Curabitur tincidunt libero enim, ut efficitur
+                          neque condimentum ac,Etiam....</br>
+                     </p>
+                     <a href="#" class="scroll">Learn more -></a>
+                         <!-- <img src="img/scroll.svg" alt="scroll down" class="scroll hide-mobile show-desktop"> -->
+            </div>
+        </section>
+    </div>
+    
+    <div class="blue-container">
+         <div class="container">
+            <ul>
+                <li>
+                    <img src="img/icon-1.svg" alt="Calender icon">
+                    <p>started in</br><h3>2019</h4></p>
+                    
+                </li>
+                <li>
+                    <img src="img/icon-2.svg" alt="my icon">
+                    <p>revenue </br><h3>$4/YEAR</h4></p>
+                </li>
+                <li>
+                    <img src="img/icon-3.svg" alt="your icon">
+                    <p>products</br> <h3>15</h4></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="gray-container">
+        <p>Meet our Team</p>
+        <div class="container">
+           
+            <ul>
+                <li>
+                    <figure>
+                        <img src="img/user1.png"   alt="user picture">
+                        <blockquote>
+                            links for social connect
+                        </blockquote>
+                        <figcaption>-Jane Doe</figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/user2.png"   alt="user picture">
+                        <blockquote>
+                            links for social connect
+                        </blockquote>
+                        <figcaption>-Jane Doe</figcaption>
+                    </figure>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="demo2">Start your project with us</h2>
+        <a href="#" class="cta">Get starter</a>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="container">
+            <a href="#">
+                <img src="img/InivtaLogo.png" alt="logo" class="logo">
+            </a>
+                <p class="address">shankar nagar pal road<br>jodhpur rajasthan</p>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#">Terms and services</a>
+                     </li>
+                     <li>
+                        <a href="#">Private policy</a>
+                     </li>
+
+                </ul>
+            
+
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <script>
+
+        var menu = document.getElementById('menu');
+        var nav = document.getElementById('nav');
+        var exit = document.getElementById('exit');
+
+        menu.addEventListener('click', function(e){
+            nav.classList.toggle('hide-mobile');
+            e.preventDefaul();
+        });
+        exit.addEventListener('click', function(e){
+            nav.classList.add('hide-mobile');
+            e.preventDefault();
+        });
+
+
+        $.fn.commentCards = function(){
+
+return this.each(function(){
+
+  var $this = $(this),
+      $cards = $this.find('.card'),
+      $current = $cards.filter('.card--current'),
+      $next;
+
+  $cards.on('click',function(){
+    if ( !$current.is(this) ) {
+      $cards.removeClass('card--current card--out card--next');
+      $current.addClass('card--out');
+      $current = $(this).addClass('card--current');
+      $next = $current.next();
+      $next = $next.length ? $next : $cards.first();
+      $next.addClass('card--next');
+    }
+  });
+
+  if ( !$current.length ) {
+    $current = $cards.last();
+    $cards.first().trigger('click');
+  }
+
+  $this.addClass('cards--active');
+
+})
+
+};
+
+$('.cards').commentCards();
+        
+    </script>
+
+
+</body>
+</html> 

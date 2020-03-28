@@ -160,20 +160,20 @@ h1{
 } 
 
 .gray-container{
-    background: #f6f6f6;
+    background: rgb(236, 112, 46);
     padding: 4em 0 2em;
     margin-top: -3%;
 }
 .gray-container p{
     text-align: center;
     font-size: 30px;
-    color: rgb(223, 135, 20);
+    color: rgba(11, 45, 103, 0.959);
     font: bold;
 }
 
-.gray-container ul li:first-child{
+/* .gray-container ul li:first-child{
     margin-bottom: 2em;
-}
+} */
 
 figure{
     margin: 0;
@@ -386,15 +386,6 @@ section div{
 
 
 
-
-
-
-
-
-
-
-
-
 @media only screen and (min-width: 650px){
 
    .mainSection h4{
@@ -463,10 +454,10 @@ section div{
 .blue-container ul li{
     margin-bottom: 0;
 }
-.blue-container ul li p{
+/* .blue-container ul li p{
     padding: 0 .8em;
     
-}
+} */
 .gray-container ul{
     display: flex;
     justify-content: space-around;
@@ -531,9 +522,20 @@ nav ul{
 }
 
 
+.gray-container .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+    
 }
 
-@media only screen and(min-width: 875px){
+
+}
+
+
+
+@media only screen and (min-width: 875px){
     .subhead{
         margin-bottom: 5%;
     }
@@ -557,6 +559,13 @@ nav ul{
         
     
     }
+    .gray-container .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+    }
+    
     
 
 }
@@ -564,7 +573,7 @@ nav ul{
 @media only screen and (min-width: 1024px){
 
     .container{
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
     section{
@@ -610,9 +619,9 @@ nav ul{
         }
         .cards .card{
            
-            background: rgba(182, 101, 68, 0.466);
-            box-shadow: 0 0 40px rgba(0, 0, 0, 0.432);
-            background-color: rgb(250, 209, 189);
+            background: rgba(190, 61, 10, 0.959);
+            box-shadow: 0 0 40px rgba(255, 104, 4, 0.973);
+            background-color: rgb(243, 235, 231);
             margin-bottom: 5px;
             margin-top: -20px;
             /* height: 300px; */
@@ -621,7 +630,7 @@ nav ul{
         }
         .mainSection .cards .card h3{
             font-size: 25px;
-            color: rgba(138, 59, 202, 0.918);
+            color: rgba(59, 102, 202, 0.685);
             font: bold;
             font-weight: 900;
         }
@@ -818,5 +827,103 @@ nav ul{
         margin-right: 40px;
         font-size: 30px;
     }
+    .gray-container .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
 
 }
+
+@media (max-width: 767px) {
+    .Ccard {
+      left: calc(50% - 20px);
+      transform: translateX(-50%);
+      
+    }
+  }
+
+
+
+
+  .Ccard {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    cursor: pointer;
+    height: 300px;
+    margin: 20px;
+    padding: 0 20px;
+    position: relative;
+    -webkit-tap-highlight-color: rgba(0,0,0,0.025);
+    text-align: center;
+    transition: height 1000ms;
+    width: 300px;
+    color: white;
+    background-image: linear-gradient(rgb(236, 112, 46),rgb(236, 112, 46),rgba(255, 136, 0, 0.397));
+  }
+ 
+  .Ccard.expanded {
+    height: 400px;
+    color: black;
+  }
+  .label {
+    margin-top: 30px;
+    transform: translateY(10px);
+    transition: transform 1000ms;
+  }
+  .Ccard.expanded .label {
+    transform: translateY(0);
+    
+  }
+  .text1 {
+    clip-path: polygon(0% 100%, 0 -90%, 50% -15%, 100% -90%, 100% 100%);
+    -webkit-clip-path: polygon(0% 100%, 0 -90%, 50% -5%, 100% -90%, 100% 100%);
+    transition: clip-path 1000ms;
+  
+  }
+  .Ccard.expanded .text1 {
+    clip-path: polygon(0% 100%, 0 -100%, 50% -15%, 100% -100%, 100% 100%);
+    -webkit-clip-path: polygon(0% 100%, 0 -100%, 50% -15%, 100% -100%, 100% 100%);
+    
+  }
+  .text2 {
+    clip-path: polygon(0% 100%,0% -80%,15% -70%,17.23% -53.59%,23% -40%,27.23% -28.94%,35% -20%,41.09% -13.59%,50% -10%,58.91% -13.23%,65% -20%,72.77% -28.23%,77% -40%,82.77% -54.65%,85% -70%,100% -80%,100% 100%);
+    -webkit-clip-path: polygon(0% 100%,0% -80%,15% -70%,17.23% -53.59%,23% -40%,27.23% -28.94%,35% -20%,41.09% -13.59%,50% -10%,58.91% -13.23%,65% -20%,72.77% -28.23%,77% -40%,82.77% -54.65%,85% -70%,100% -80%,100% 100%);
+    transition: clip-path 1000ms;
+  }
+  .Ccard.expanded .text2 {
+    clip-path: polygon(0% 100%,0% -90%,15% -80%,17.23% -63.59%,23% -50%,27.23% -38.94%,35% -30%,41.09% -23.59%,50% -20%,58.91% -23.23%,65% -30%,72.77% -38.23%,77% -50%,82.77% -64.65%,85% -80%,100% -90%,100% 100%);
+    -webkit-clip-path: polygon(0% 100%,0% -90%,15% -80%,17.23% -63.59%,23% -50%,27.23% -38.94%,35% -30%,41.09% -23.59%,50% -20%,58.91% -23.23%,65% -30%,72.77% -38.23%,77% -50%,82.77% -64.65%,85% -80%,100% -90%,100% 100%);
+  }
+  .text-content {
+    transform: translateY(-260px);
+    transition: transform 1000ms;
+  
+  }
+  .Ccard.expanded .text-content {
+    transform: translateY(-15px);
+  }
+  .chevron {
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 15px);
+    transform-origin: 50%;
+    transform: rotate(180deg);
+    transition: transform 1000ms;
+  }
+  .Ccard.expanded .chevron {
+    transform: rotate(0deg);
+  }
+  .Ctitle {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 900;
+    margin-top: 15px;
+    color: rgba(34, 32, 32, 0.376);
+    margin-right: 25px;
+  }
+  .body-text {
+    padding: 0 10px;
+  }
+  

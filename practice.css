@@ -161,8 +161,11 @@ h1{
 
 .gray-container{
     background: rgb(236, 112, 46);
-    padding: 4em 0 2em;
+    padding: 1em;
     margin-top: -3%;
+    text-align: center;
+    
+   
 }
 .gray-container p{
     text-align: center;
@@ -318,12 +321,24 @@ section div{
     margin-right: 20px;
 }
 
+.rr{
+    position: relative;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding-left: 93%;
+    margin-top: -312px;
+    padding-bottom: 232px;
+    z-index: 7;
+    color: rgb(0, 0, 0);
+    overflow: auto;
+}
+
 
 .cards {
     position: relative;
     list-style-type: none;
     padding: 5%;
-    max-width: 34em;
+    max-width: 33em;
     margin: 20% auto 0;
     background-color: #22223200;
     padding-right: 4%;
@@ -383,7 +398,7 @@ section div{
     transform: rotate(-1deg) translateX(0%) scale(1);
     }
 
-
+  
 
 
 @media only screen and (min-width: 650px){
@@ -522,14 +537,30 @@ nav ul{
 }
 
 
-.gray-container .container {
+.gray-container .container{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-   
-    
+        flex-direction: row;
+        justify-content: space-around;
+  }
+
+
+.rr{
+    position: relative;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    padding-left: 97%;
+    margin-top: -194px;
+    z-index: 7;
+    color: rgb(0, 0, 0);
+    overflow: auto;
 }
 
+.gray-container .container .Ccard {
+  background-color: teal;
+
+
+    
+  }
 
 }
 
@@ -567,7 +598,16 @@ nav ul{
     }
     
     
-
+    .rr{
+        position: relative;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        padding-left: 97%;
+        margin-top: -194px;
+        z-index: 7;
+        color: rgb(17, 16, 16);
+        overflow: auto;
+    }
 }
 
 @media only screen and (min-width: 1024px){
@@ -639,14 +679,14 @@ nav ul{
             height:16em;
             margin-top: -40px;
             margin-bottom: 50px;
-            width: 29em;
+            width: 30em;
             background-color: #22223200;
         }
 
 
 
     .section .mainSection{
-       padding-right: 4em;
+       padding-right: 90px;
        padding-top: 2em;
     }
 
@@ -836,13 +876,16 @@ nav ul{
 
 }
 
-@media (max-width: 767px) {
-    .Ccard {
+/* @media only screen and (max-width: 767px) {
+   .gray-container .container .Ccard {
       left: calc(50% - 20px);
       transform: translateX(-50%);
-      
+      margin-left: -7em;
+        margin-right: 9em;
+    
+      background-color: rgb(195, 55, 55);
     }
-  }
+  } */
 
 
 
@@ -852,9 +895,11 @@ nav ul{
     border-radius: 8px;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     cursor: pointer;
-    height: 300px;
-    margin: 20px;
-    padding: 0 20px;
+    height: 280px;
+    /* margin: 15px; */
+    /* padding: 10px; */
+    
+    justify-content: center;
     position: relative;
     -webkit-tap-highlight-color: rgba(0,0,0,0.025);
     text-align: center;
@@ -927,3 +972,18 @@ nav ul{
     padding: 0 10px;
   }
   
+
+  .container{
+    display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+  }
+
+
+
+
+  .NextCard{
+      color: tomato;
+      font-weight: 900;
+      font-size: 15px;
+  }
